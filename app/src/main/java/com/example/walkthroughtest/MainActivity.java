@@ -100,15 +100,6 @@ public class MainActivity extends AppCompatActivity {
                 mPrevBtn.setVisibility(View.VISIBLE);
                 mNextBtn.setText("Finish");
                 mPrevBtn.setText("Back");
-            } else {
-                mNextBtn.setEnabled(true);
-                mPrevBtn.setEnabled(true);
-                mPrevBtn.setVisibility(View.VISIBLE);
-                mNextBtn.setText("Next");
-                mPrevBtn.setText("Back");
-            }
-            if( position == mDots.length -1)
-            {
                 mNextBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -119,7 +110,14 @@ public class MainActivity extends AppCompatActivity {
 
                 });
 
+            } else {
+                mNextBtn.setEnabled(true);
+                mPrevBtn.setEnabled(true);
+                mPrevBtn.setVisibility(View.VISIBLE);
+                mNextBtn.setText("Next");
+                mPrevBtn.setText("Back");
             }
+
 
         }
 
